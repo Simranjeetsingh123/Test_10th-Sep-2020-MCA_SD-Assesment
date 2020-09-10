@@ -1,0 +1,127 @@
+
+Answer of 2 question:
+package q;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		int[] z = new int[9];
+		int[] x = new int[8];
+		int[] c = new int[5];
+		int[] v = new int[2];
+		int temp;
+
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < 9; i++) {
+			z[i] = sc.nextInt();
+		}
+
+		for (int i = 0; i < z.length; i++) {
+			for (int j = i + 1; j < z.length; j++) {
+				if (z[i] > z[j]) {
+					temp = z[i];
+					z[i] = z[j];
+					z[j] = temp;
+				}
+			}
+		}
+		System.out.println("Third largest number is: " + z[z.length - 3]);
+
+		for (int i = 0; i < 8; i++) {
+			x[i] = sc.nextInt();
+		}
+		System.out.println("*****");
+		for (int i = 0; i < x.length; i++) {
+			for (int j = i + 1; j < x.length; j++) {
+				if (x[i] > x[j]) {
+					temp = x[i];
+					x[i] = x[j];
+					x[j] = temp;
+				}
+			}
+		}
+		System.out.println("Third largest number is: " + x[x.length - 3]);
+		System.out.println("*****");
+
+		for (int i = 0; i < 5; i++) {
+			c[i] = sc.nextInt();
+		}
+		for (int i = 0; i < c.length; i++) {
+			for (int j = i + 1; j < c.length; j++) {
+				if (c[i] > c[j]) {
+					temp = c[i];
+					c[i] = c[j];
+					c[j] = temp;
+				}
+				else {
+					System.out.println("Not vaild");
+				}
+			}
+		}
+		System.out.println("Third largest number is: " + c[c.length - 3]);
+		System.out.println("*****");
+
+		for (int i = 0; i < 2; i++) {
+			v[i] = sc.nextInt();
+		}
+		System.out.println("*****");
+
+		for (int i = 0; i < v.length; i++) {
+			for (int j = i + 1; j < v.length; j++) {
+				if (v[i] > v[j]) {
+					temp = v[i];
+					v[i] = v[j];
+					v[j] = temp;
+				}
+				else {
+					System.out.println("Not vaild");
+				}
+			}
+		}
+		System.out.println("Third largest number is: " + v[v.length - 3]);
+
+	}
+
+}
+
+
+Duplicate elements:
+package q;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		int[] z = new int[5];
+		int[] x = new int[7];
+
+
+		Scanner sc = new Scanner (System.in);
+		for (int i = 0; i < 5; i++) {
+			z[i] = sc.nextInt();
+		}
+		 for(int i = 0; i < z.length; i++) {  
+	            for(int j = i + 1; j < z.length; j++) {  
+	                if(z[i] == z[j])  
+	                    System.out.println("Duplicate elements in array:"+z[j]);  
+	            }}
+		System.out.println("***************");
+		
+		for (int i = 0; i < 7; i++) {
+			x[i] = sc.nextInt();
+		}
+		 for(int i = 0; i < x.length; i++) {  
+	            for(int j = i + 1; j < x.length; j++) {  
+	                if(x[i] == x[j])  
+	                    System.out.println("Duplicate elements in array:"+x[j]);  
+	            }}
+		
+	}
+
+}
+
